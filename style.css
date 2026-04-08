@@ -1,37 +1,28 @@
 body {
     display: flex;
     font-family: 'Red Hat Text', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 #controls {
     display: flex;
     flex-direction: column;
-    min-width: 250px;
-    padding: 16px;
+    width: 280px;
+    min-width: 280px;
+    padding: 24px;
     gap: 8px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
 }
 
 #table-container {
     flex: 1;
-    padding: 16px;
-}
-
-#button {
-  padding: 8px 16px;
-  font-size: 16px;
-  font-family: 'Red Hat Text', sans-serif;
-  text-transform: uppercase;
-  border-radius: 12px;
-  border: 1px solid #685555;
-  background-color: #12a6c0;
-  transition: background-color 0.25s ease, letter-spacing 0.25s ease;
-  cursor: pointer;
-}
-
-#button:hover {
-  background-color: #43cadf;
-  letter-spacing: 3px;
-  cursor: pointer;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 table {
@@ -43,4 +34,54 @@ td {
     border: 1px solid #ccc;
     padding: 8px;
     text-align: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+    cursor: pointer;
+}
+
+td:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    filter: brightness(0.8);
+    position: relative;
+    z-index: 10;
+}
+
+input[type="number"],
+input[type="color"] {
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    padding: 6px 8px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: 14px;
+    transition: border-bottom-color 0.25s ease;
+}
+
+input[type="number"]:focus,
+input[type="color"]:focus {
+    border-bottom: 2px solid #12a6c0;
+}
+
+label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+#button {
+    padding: 8px 16px;
+    font-size: 16px;
+    font-family: 'Red Hat Text', sans-serif;
+    text-transform: uppercase;
+    border-radius: 12px;
+    border: 1px solid #685555;
+    background-color: #12a6c0;
+    transition: background-color 0.25s ease, letter-spacing 0.25s ease;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+#button:hover {
+    background-color: #43cadf;
+    letter-spacing: 3px;
 }
