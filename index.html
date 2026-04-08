@@ -1,24 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tabliczka Mnożenia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabliczka Mnożenia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="controls">
-    <label for="size">Rozmiar tabeli</label>
-    <input type="number" id="size">
-    <label for="modulo">Modulo</label>
-    <input type="number" id="modulo">
-    <label for="color1">Kolor modulo</label>
-    <input type="color" id="color1">
-    <label for="color2">Kolor parzystych</label>
-    <input type="color" id="color2">
-    <label for="color3">Kolor nieparzystych</label>
-    <input type="color" id="color3">
-    <button id="button">Generuj Tabliczkę</button>
-  </div>
-  <div id="table-container"></div>
+    <div id="controls">
+        <label for="size">Rozmiar tabeli</label>
+        <input type="number" id="size" min="2" max="12">
+
+        <label for="modulo">Modulo</label>
+        <input type="number" id="modulo" min="1">
+
+        <label for="color1">Kolor modulo</label>
+        <input type="color" id="color1" value="#d2f">
+
+        <label for="color2">Kolor parzystych</label>
+        <input type="color" id="color2" value="#f44">
+
+        <label for="color3">Kolor nieparzystych</label>
+        <input type="color" id="color3" value="#cf4">
+
+        <button id="button">Generuj Tabliczkę</button>
+    </div>
+    <div id="table-container"></div>
+    <script src="script.js"></script>
 </body>
 </html>
