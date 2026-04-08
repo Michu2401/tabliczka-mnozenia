@@ -35,3 +35,7 @@ Priorytet kolorowania komórek:
 - Rozmiar tabliczki: minimum **2**, maksimum **12**
 - Modulo nie może być większe niż rozmiar tabliczki
 - Błędy wyświetlane jako natywne tooltopy przeglądarki
+
+## Moj GitHub
+
+https://github.com/Michu2401/tabliczka-mnozenia
